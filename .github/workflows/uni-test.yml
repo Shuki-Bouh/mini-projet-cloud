@@ -7,16 +7,11 @@ jobs:
     steps:
     - name: Install dependencies
       run: sudo apt install node
-
     - name: Check out repository code
       uses: actions/checkout@v4
-      
-      - run: npm ci
-
-      - name: Build app
-        run: npm run build
-
-      - name: Test app
-        run: npm run test
-
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+    - run: npm ci
+    - name: Build app
+      run: npm run build
+    - name: Test app
+      run: npm run test
+    - run: echo "🍏 This job's status is ${{ job.status }}."
