@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Test app
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v4
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: Build app
+        run: npm run build
       - name: Test app
         run: npm run test
       - run: echo "🍏 This job's status is ${{ job.status }}."
