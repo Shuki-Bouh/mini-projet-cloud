@@ -4,9 +4,7 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    steps:
-    - name: Install dependencies
-      run: sudo apt update && sudo apt upgrade && sudo apt install node
+    steps:  
     - name: Check out repository code
       uses: actions/checkout@v4
     - run: npm ci
