@@ -20,6 +20,5 @@
     "baseUrl": "./",
     "incremental": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*", "src/getSystemInformation.ts", "src/hello-world.ts"]
 }

@@ -1,4 +1,4 @@
-import { helloWorld } from './hello-world';
+import { helloWorld } from '../src/hello-world';
 
 describe('typeScript test suite', () => {
   it('should return "Hello world!"', () => {
