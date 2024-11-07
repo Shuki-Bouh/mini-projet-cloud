@@ -8,7 +8,7 @@ COPY src/ ./src/
 COPY package*.json .
 COPY tsconfig.json .
 
-RUN npm install --only=production && \
+RUN npm install && \
     cp -R node_modules prod_node_modules && \
     npm run build
 
@@ -26,4 +26,4 @@ USER node
 COPY --from=builder /prod_node_modules ./node_modules
 COPY --from=builder --chown=node:node /dist ./dist
 
-CMD node dist/src/index.js
+CMD node dist/index.js
