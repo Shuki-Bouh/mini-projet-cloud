@@ -8,8 +8,9 @@ COPY src/ ./src/
 COPY package*.json .
 COPY tsconfig.json .
 
-RUN npm install && \
+RUN npm install --only=production && \
     cp -R node_modules prod_node_modules && \
+    npm install && \
     npm run build
 
 
