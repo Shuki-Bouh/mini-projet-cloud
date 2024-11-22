@@ -24,7 +24,7 @@ const server = http.createServer(async(req, res) => {
     }
   });
 
-
+export default server;
   
 const greet = helloWorld();
 console.log(greet);
